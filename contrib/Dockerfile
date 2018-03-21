@@ -5,7 +5,7 @@
 # 1. install docker, see docker.com
 # 2. clone the git repo including this Dockerfile
 # 3. build the container with ```docker build -t nxt .```
-# 4. run the created nxt container with ```docker run -d -p 127.0.0.1:7876:7876 -p 47874:47874 nxt```
+# 4. run the created nxt container with ```docker run -d -p 127.0.0.1:47876:47876 -p 47874:47874 nxt```
 # 5. inspect with docker logs (image hash, find out with docker ps, or assign a name)
 
 FROM phusion/baseimage
@@ -37,5 +37,5 @@ RUN chmod +x /docker_start.sh
 
 RUN cd /nxt; ./compile.sh
 # both Nxt ports get exposed
-EXPOSE 47874 7876
+EXPOSE 47874 47876
 CMD ["/docker_start.sh"]
