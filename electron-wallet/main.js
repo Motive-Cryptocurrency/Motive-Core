@@ -7,6 +7,7 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
+const {dialog} = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -25,6 +26,10 @@ function createWindow () {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  javaversion(function(err,version){
+      console.log("Version is " + version)
+  })
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -77,11 +82,8 @@ function javaversion(callback) {
 
         } else {
           // Send an error to the user
-
+          dialog.showMessageBox({title: 'Java 8 is required', message: 'GTD Wallet needs Java 8 (JRE 1.8) in order to run. Please install it, you can find it here: https://www.java.com/fr/download/'})
+          app.quit()
         }
-    });
+    })
 }
-
-javaversion(function(err,version){
-    console.log("Version is " + version)
-})
