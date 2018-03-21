@@ -59,6 +59,29 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-var child = require('child_process').spawn(
-  'java', ['-jar', 'GTD-Cryptocurrency.jar']
-);
+
+function javaversion(callback) {
+    const spawn = require('child_process').spawn('java', ['-version']);
+    spawn.on('error', function(err){
+        return callback(err, null)
+    })
+    spawn.stderr.on('data', function(data) {
+        data = data.toString().split('\n')[0]
+        const javaVersion = new RegExp('java version').test(data) ? data.split(' ')[2].replace(/"/g, '') : false
+        if (javaVersion != false) {
+          // Run the service
+          const child = require('child_process').spawn(
+            'java', ['-jar', 'GTD-Cryptocurrency.jar']
+          )
+          return callback(null, javaVersion)
+
+        } else {
+          // Send an error to the user
+
+        }
+    });
+}
+
+javaversion(function(err,version){
+    console.log("Version is " + version)
+})
