@@ -1,21 +1,22 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-gtd-wallet",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A wrapper for GTD wallet",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/sandoche/GTD-PoS-Cryptocurrency",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "wallet",
+    "gtd",
+    "blockchain",
+    "nxt",
+	"cryptocurrency"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Sandoche ADITTANE",
+  "license": "MIT",
   "devDependencies": {
     "electron": "~1.8.2"
   }
