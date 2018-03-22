@@ -89,7 +89,7 @@
       // You can also require other files to run in this process
       require('./renderer.js')
 
-      // Fix for ubuntu
+      // Fix for ubuntu (should be refactored)
       const webview = document.querySelector('webview')
       let reload = true
       webview.addEventListener('dom-ready', () => {
