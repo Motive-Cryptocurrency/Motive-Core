@@ -88,6 +88,24 @@
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
+
+      // Fix for ubuntu (should be refactored)
+      const webview = document.querySelector('webview')
+      let reload = true
+      webview.addEventListener('dom-ready', () => {
+        (function myLoop (i) {
+           setTimeout(function () {
+              console.log(document.querySelector('webview').getTitle())
+              if(document.querySelector('webview').getTitle() !== 'GTD Wallet' && reload == true) {
+                console.log('Reload')
+                document.querySelector('webview').reload()
+              } else {
+                reload = false
+              }
+              if (--i) myLoop(i);
+           }, 5000)
+        })(50);
+      })
     </script>
   </body>
 </html>

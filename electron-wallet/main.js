@@ -74,16 +74,16 @@ function javaversion(callback) {
         data = data.toString().split('\n')[0]
         const javaVersion = new RegExp('java version').test(data) ? data.split(' ')[2].replace(/"/g, '') : false
         if (javaVersion != false) {
-          // Log the version
+          // Run the service
+          const child = require('child_process').spawn(
+            'java', ['-jar', 'GTD-Cryptocurrency.jar']
+          )
           return callback(null, javaVersion)
 
         } else {
           // Send an error to the user
           dialog.showMessageBox({title: 'Java 8 is required', message: 'GTD Wallet needs Java 8 (JRE 1.8) in order to run. Please install it, you can find it here: https://www.java.com/fr/download/'})
+          app.quit()
         }
     })
 }
-
-const child = require('child_process').spawn(
-  'java', ['-jar', 'GTD-Cryptocurrency.jar']
-)
