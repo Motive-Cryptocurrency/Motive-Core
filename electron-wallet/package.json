@@ -1,5 +1,5 @@
 {
-  "name": "electron-gtd-wallet",
+  "name": "GTD-Wallet",
   "version": "1.0.0",
   "description": "A wrapper for GTD wallet",
   "main": "main.js",
