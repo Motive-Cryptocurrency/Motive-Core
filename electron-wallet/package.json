@@ -6,7 +6,10 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -mwl",
+	"dist": "electron-builder -mwl",
+    "dist:windows": "electron-builder -w",
+	"dist:windows": "electron-builder -l",
+	"dist:windows": "electron-builder -m",
     "postinstall": "electron-builder install-app-deps"
   },
   "repository": "https://github.com/sandoche/GTD-PoS-Cryptocurrency",
@@ -28,6 +31,14 @@
     "appId": "gtd.wallet",
     "mac": {
       "category": "finance"
-    }
+    },
+	"extraFiles": [
+		"conf/**",
+		"html/**",
+		"lib/**",
+		"logs/**",
+		"nxt_db/**",
+		"GTD-Cryptocurrency.jar"
+	]
   }
 }
