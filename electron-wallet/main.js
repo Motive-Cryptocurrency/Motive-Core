@@ -83,7 +83,6 @@ function javaversion(callback) {
         } else {
           // Send an error to the user
           dialog.showMessageBox({title: 'Java 8 is required', message: 'GTD Wallet needs Java 8 (JRE 1.8) in order to run. Please install it, you can find it here: https://www.java.com/fr/download/'})
-          app.quit()
         }
     })
 }
