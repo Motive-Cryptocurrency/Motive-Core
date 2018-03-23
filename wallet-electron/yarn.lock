@@ -71,25 +71,13 @@ app-builder-bin-linux@1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/app-builder-bin-linux/-/app-builder-bin-linux-1.7.2.tgz#a764c8e52ecf1b5b068f32c820c6daf1ffed6a8f"
 
-app-builder-bin-linux@1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/app-builder-bin-linux/-/app-builder-bin-linux-1.7.3.tgz#d92d0523de7e4737806177a16a83c1fd2789d360"
-
 app-builder-bin-mac@1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/app-builder-bin-mac/-/app-builder-bin-mac-1.7.2.tgz#c4ee0d950666c97c12a45ac74ec6396be3357644"
 
-app-builder-bin-mac@1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/app-builder-bin-mac/-/app-builder-bin-mac-1.7.3.tgz#43067bdb65a7b0923b2c4e2ed92547168417413b"
-
 app-builder-bin-win@1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/app-builder-bin-win/-/app-builder-bin-win-1.7.2.tgz#7acac890782f4118f09941b343ba06c56452a6f6"
-
-app-builder-bin-win@1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/app-builder-bin-win/-/app-builder-bin-win-1.7.3.tgz#9913b7f572aaa17109ea4630a2bc5b70750d8a89"
 
 app-builder-bin@1.7.2:
   version "1.7.2"
@@ -98,14 +86,6 @@ app-builder-bin@1.7.2:
     app-builder-bin-linux "1.7.2"
     app-builder-bin-mac "1.7.2"
     app-builder-bin-win "1.7.2"
-
-app-builder-bin@1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-1.7.3.tgz#63fac486ddbd61181aeef3239dbe3b202bddda22"
-  optionalDependencies:
-    app-builder-bin-linux "1.7.3"
-    app-builder-bin-mac "1.7.3"
-    app-builder-bin-win "1.7.3"
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -196,7 +176,7 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-builder-util-runtime@4.0.5:
+builder-util-runtime@4.0.5, builder-util-runtime@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/builder-util-runtime/-/builder-util-runtime-4.0.5.tgz#5340cf9886b9283ea6e5b20dc09b5e3e461aef62"
   dependencies:
@@ -205,16 +185,7 @@ builder-util-runtime@4.0.5:
     fs-extra-p "^4.5.0"
     sax "^1.2.4"
 
-builder-util-runtime@^4.0.5, builder-util-runtime@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/builder-util-runtime/-/builder-util-runtime-4.2.0.tgz#c56aa18d34390143da031c418c9d3a055fbd3522"
-  dependencies:
-    bluebird-lst "^1.0.5"
-    debug "^3.1.0"
-    fs-extra-p "^4.5.2"
-    sax "^1.2.4"
-
-builder-util@5.6.5:
+builder-util@5.6.5, builder-util@^5.6.5:
   version "5.6.5"
   resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-5.6.5.tgz#f2d156541b8df9599456848e057566443dc04c82"
   dependencies:
@@ -230,25 +201,6 @@ builder-util@5.6.5:
     lazy-val "^1.0.3"
     semver "^5.5.0"
     source-map-support "^0.5.3"
-    stat-mode "^0.2.2"
-    temp-file "^3.1.1"
-
-builder-util@^5.6.5:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-5.7.0.tgz#25ca363e2228b4117b2d8a8f41a2577d91deadf7"
-  dependencies:
-    "7zip-bin" "~3.1.0"
-    app-builder-bin "1.7.3"
-    bluebird-lst "^1.0.5"
-    builder-util-runtime "^4.2.0"
-    chalk "^2.3.2"
-    debug "^3.1.0"
-    fs-extra-p "^4.5.2"
-    is-ci "^1.1.0"
-    js-yaml "^3.11.0"
-    lazy-val "^1.0.3"
-    semver "^5.5.0"
-    source-map-support "^0.5.4"
     stat-mode "^0.2.2"
     temp-file "^3.1.1"
 
@@ -621,13 +573,9 @@ extract-zip@^1.0.3:
     mkdirp "0.5.0"
     yauzl "2.4.1"
 
-extsprintf@1.3.0:
+extsprintf@1.3.0, extsprintf@^1.2.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
-
-extsprintf@^1.2.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
 fast-deep-equal@^1.0.0:
   version "1.1.0"
@@ -1488,7 +1436,7 @@ sntp@2.x.x:
   dependencies:
     hoek "4.x.x"
 
-source-map-support@^0.5.3, source-map-support@^0.5.4:
+source-map-support@^0.5.3:
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.4.tgz#54456efa89caa9270af7cd624cc2f123e51fbae8"
   dependencies:
