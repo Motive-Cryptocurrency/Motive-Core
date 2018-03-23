@@ -6,10 +6,10 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-	"dist": "electron-builder -mwl",
-    "dist:windows": "electron-builder -w",
-	"dist:linux": "electron-builder -l",
-	"dist:mac": "electron-builder -m",
+	  "dist": "electron-builder -mwl",
+    "dist:win": "electron-builder -w",
+	  "dist:lin": "electron-builder -l",
+	  "dist:mac": "electron-builder -m",
     "postinstall": "electron-builder install-app-deps"
   },
   "repository": "https://github.com/sandoche/GTD-PoS-Cryptocurrency",
