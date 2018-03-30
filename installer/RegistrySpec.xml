@@ -26,7 +26,7 @@
         <value name="HelpLink"
                keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME"
                root="HKLM"
-               string="https://nxtforum.org/nxt-helpdesk"/>
+               string="https://gtd.network"/>
         <value name="URLInfoAbout"
                keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME"
                root="HKLM"
