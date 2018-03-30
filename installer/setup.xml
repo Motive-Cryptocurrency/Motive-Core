@@ -4,7 +4,7 @@
         <property file="conf/nxt-default.properties" prefix="runtime"/>
     </properties>
     <info>
-        <appname>NXT</appname>
+        <appname>GTD</appname>
         <appversion>@{runtime.nxt.version}</appversion>
         <url>https://nxt.org</url>
         <run-privileged condition="izpack.windowsinstall"/>
