@@ -83,7 +83,7 @@
     </locale>
 
     <resources>
-        <res id="InfoPanel.info" src="changelogs/nxt-client-@{runtime.nxt.version}.changelog.txt" parse="yes"/>
+        <res id="InfoPanel.info" src="changelogs/nxt-clone-client-1.11.13.changelog.txt" parse="yes"/>
         <res id="LicencePanel.licence" src="LICENSE.txt"/>
         <res id="Installer.image" src="html/www/img/installer_left_pane.png"/>
         <res id="shortcutSpec.xml" src="../installer/shortcutSpec.xml"/>
@@ -112,7 +112,7 @@
             <description>Common Server Files</description>
             <file src="GTD-Cryptocurrency.jar" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="README.txt" targetdir="${INSTALL_PATH}" override="true"/>
-            <file src="NXT_Wallet.url" targetdir="${INSTALL_PATH}" override="true"/>
+            <file src="Wallet.url" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="3RD-PARTY-LICENSES.txt" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="AUTHORS.txt" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="COPYING.txt" targetdir="${INSTALL_PATH}" override="true"/>
@@ -125,8 +125,6 @@
             <file src="nxtdesktop.policy" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="conf/nxt-default.properties" targetdir="${INSTALL_PATH}/conf" override="true"/>
             <file src="conf/logging-default.properties" targetdir="${INSTALL_PATH}/conf" override="true"/>
-            <file src="conf/fxt.json" targetdir="${INSTALL_PATH}/conf" override="true"/>
-            <file src="conf/fxt-testnet.json" targetdir="${INSTALL_PATH}/conf" override="true"/>
             <fileset dir="lib" targetdir="${INSTALL_PATH}/lib" override="true" excludes=".gitignore"/>
             <fileset dir="changelogs" targetdir="${INSTALL_PATH}/changelogs" override="true" excludes=".gitignore"/>
             <fileset dir="classes" targetdir="${INSTALL_PATH}/classes" override="true" excludes=".gitignore"/>
@@ -147,7 +145,6 @@
         <pack name="server.windows" os="windows" required="yes">
             <description>Windows Specific Resources</description>
             <os family="windows"/>
-            <file src="GTD-Cryptocurrencyservice.exe" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="GTD-Cryptocurrencyservice.exe" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="GTD-Cryptocurrencyservice.jar" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="run.bat" targetdir="${INSTALL_PATH}" override="true"/>

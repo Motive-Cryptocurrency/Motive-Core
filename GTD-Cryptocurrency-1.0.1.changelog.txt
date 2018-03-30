@@ -1,0 +1,17 @@
+Release 1.0.1
+
+https://bitbucket.org/JeanLucPicard/nxt/downloads/GTD-Cryptocurrency-1.0.1.exe
+
+sha256:
+
+b18dbde44408665da791c35b001123613b5498aa98b1d3243d3ff8fe44bbc542 *GTD-Cryptocurrency-1.0.1.exe
+https://bitbucket.org/JeanLucPicard/nxt/downloads/GTD-Cryptocurrency-1.0.1.jar
+
+sha256:
+
+85f7f9f6532da5fb0ccde893d0f51d1ae00ab7f5485a9b328d8de635fe6e30c6 *GTD-Cryptocurrency-1.0.1.jar
+
+
+Change log:
+
+
