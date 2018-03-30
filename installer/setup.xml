@@ -6,7 +6,7 @@
     <info>
         <appname>GTD</appname>
         <appversion>@{runtime.nxt.version}</appversion>
-        <url>https://nxt.org</url>
+        <url>https://gtd.network</url>
         <run-privileged condition="izpack.windowsinstall"/>
     </info>
 
@@ -83,7 +83,7 @@
     </locale>
 
     <resources>
-        <res id="InfoPanel.info" src="changelogs/nxt-clone-client-1.11.13.changelog.txt" parse="yes"/>
+		<res id="InfoPanel.info" src="changelogs/nxt-clone-client-1.11.13.changelog.txt" parse="yes"/>
         <res id="LicencePanel.licence" src="LICENSE.txt"/>
         <res id="Installer.image" src="html/www/img/installer_left_pane.png"/>
         <res id="shortcutSpec.xml" src="../installer/shortcutSpec.xml"/>
@@ -133,11 +133,13 @@
             <fileset dir="contrib" targetdir="${INSTALL_PATH}/contrib" override="true" excludes=".gitignore"/>
             <fileset dir="logs" targetdir="${INSTALL_PATH}/logs" override="true" excludes=".gitignore"/>
             <fileset dir="addons" targetdir="${INSTALL_PATH}/addons" override="true" excludes=".gitignore"/>
+			<fileset dir="conf" targetdir="${INSTALL_PATH}/conf" override="true" excludes=".gitignore"/>
             <updatecheck>
                 <include name="*.desktop" />
                 <include name="lib/**" />
                 <include name="classes/**" />
                 <include name="html/**" />
+				<include name="conf/**" />
                 <exclude name="html/www/plugins/**" />
             </updatecheck>
         </pack>
@@ -145,6 +147,7 @@
         <pack name="server.windows" os="windows" required="yes">
             <description>Windows Specific Resources</description>
             <os family="windows"/>
+			<file src="GTD-Cryptocurrency.exe" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="GTD-Cryptocurrencyservice.exe" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="GTD-Cryptocurrencyservice.jar" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="run.bat" targetdir="${INSTALL_PATH}" override="true"/>
