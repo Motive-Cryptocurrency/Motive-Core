@@ -1,0 +1,36 @@
+<shortcuts>
+	<skipIfNotSupported/>
+	<defaultCurrentUser/>
+	<programGroup defaultName="GTD" location="startMenu"/>
+	<shortcut
+		name="GTD Server"
+		target="$INSTALL_PATH\GTD-Cryptocurrency.exe"
+		commandLine=""
+		workingDirectory="$INSTALL_PATH"
+        description="Start GTD server"
+		iconFile="$INSTALL_PATH\html\www\icon.ico"
+        iconIndex="0"
+        initialState="normal"
+        programGroup="yes"
+		desktop="yes"
+        applications="no"
+        startMenu="no"
+		startup="no"
+		runAsAdministrator="true">
+	</shortcut>	
+	<shortcut
+		name="GTD Wallet"
+		target="http://localhost:37876/index.html"
+		commandLine=""
+		workingDirectory="$INSTALL_PATH"
+        description="Launch GTD wallet in browser"
+		iconFile="$INSTALL_PATH\html\www\icon.ico"
+        iconIndex="0"
+        initialState="normal"
+        programGroup="yes"
+		desktop="yes"
+        applications="no"
+        startMenu="no"
+		startup="no">
+	</shortcut>	
+</shortcuts>
