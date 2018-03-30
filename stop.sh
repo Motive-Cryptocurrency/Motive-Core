@@ -1,5 +1,5 @@
 #!/bin/sh
-APPLICATION="nxt-clone"
+APPLICATION="GTD-Cryptocurrency"
 if [ -e ~/.${APPLICATION}/nxt.pid ]; then
     PID=`cat ~/.${APPLICATION}/nxt.pid`
     ps -p $PID > /dev/null
