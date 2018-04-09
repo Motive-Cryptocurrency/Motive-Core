@@ -69,4 +69,4 @@ cd -
 rm -rf nxt
 
 echo bundle a dmg file
-/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/bin/javapackager -deploy -outdir . -outfile gtd-client -name gtd-installer -width 34 -height 43 -native dmg -srcfiles ${PACKAGE}.jar -appclass com.izforge.izpack.installer.bootstrap.Installer -v -Bmac.category=Business -Bmac.CFBundleIdentifier=org.gtd.client.installer -Bmac.CFBundleName=GTD-Installer -Bmac.CFBundleVersion=${MACVERSION} -BappVersion=${MACVERSION} -Bicon=installer/AppIcon.icns > installer/javapackager.log 2>&1
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/bin/javapackager -deploy -outdir . -outfile gtd-client -name gtd-installer -width 34 -height 43 -native dmg -srcfiles ${PACKAGE}.jar -appclass com.izforge.izpack.installer.bootstrap.Installer -v -Bmac.category=Business -Bmac.CFBundleIdentifier=org.gtd.client.installer -Bmac.CFBundleName=GTD-Installer -Bmac.CFBundleVersion=${MACVERSION} -BappVersion=${MACVERSION} -Bicon=installer/AppIcon.icns  -Bmac.signing-key-developer-id-app="Developer ID Application: Stichting NXT (YU63QW5EFW)" > installer/javapackager.log 2>&1
