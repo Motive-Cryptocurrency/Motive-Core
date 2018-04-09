@@ -22,7 +22,6 @@
 /compile.bat
 /test/classes/
 *.csv
-/jre
 /dist
 deploy.sh
 /resource/nxt.manifest.mf
