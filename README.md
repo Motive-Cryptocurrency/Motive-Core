@@ -22,8 +22,8 @@ By using one of these services you can earn GTD Coin by only doing your own task
 ## Run
 - Install with the installer run the Server, then the webwallet
 - Or
-  - Unix: `./start.sh`
-  - Mac: `./start.sh`  
+  - Unix: `sh ./start.sh`
+  - Mac: `sh ./start.sh`  
   - Window: `run.bat`
   - wait for the JavaFX wallet window to open
   - on platforms without JavaFX, open http://localhost:37876/ in a browser
