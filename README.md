@@ -16,7 +16,7 @@ By using one of these services you can earn GTD Coin by only doing your own task
 - *FreeBSD* - `pkg install openjdk8`
 
 ## Compile
-- if necessary with: `./compile.sh`
+- if necessary with: `sh ./compile.sh`
 - you need jdk-8
 
 ## Run
