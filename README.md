@@ -4,8 +4,7 @@ GTD Cryptocurrency is a motivational coin. Its goal is to motivate people to do 
 - Read the story: (coming soon)
 - Website: https://gtd.network
 
-## How to earn GTD Coins?
-
+## How to earn GTDs?
 By using one of these services you can earn GTD Coin by only doing your own tasks:
 - Kanbanote - Drag'n'drop your tasks, and get rewarded when they are completed - https://beta.kanbanote.com
 - Soon other partners will integrate GTD.
