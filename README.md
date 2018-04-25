@@ -4,7 +4,7 @@ GTD Cryptocurrency is a motivational coin. Its goal is to motivate people to do 
 - Read the story: (coming soon)
 - Website: https://gtd.network
 
-## How to earn GTD Coins?
+## How to earn GTDs?
 By using one of these services you can earn GTD Coin by only doing your own tasks:
 - Kanbanote - Drag'n'drop your tasks, and get rewarded when they are completed - https://beta.kanbanote.com
 - Soon other partners will integrate GTD.
@@ -16,14 +16,14 @@ By using one of these services you can earn GTD Coin by only doing your own task
 - *FreeBSD* - `pkg install openjdk8`
 
 ## Compile
-- if necessary with: `./compile.sh`
-- you need jdk-8 as well
+- if necessary with: `sh ./compile.sh`
+- you need jdk-8
 
 ## Run
 - Install with the installer run the Server, then the webwallet
 - Or
-  - Unix: `./start.sh`
-  - Mac: `./start.sh`  
+  - Unix: `sh ./start.sh`
+  - Mac: `sh ./start.sh`  
   - Window: `run.bat`
   - wait for the JavaFX wallet window to open
   - on platforms without JavaFX, open http://localhost:37876/ in a browser
