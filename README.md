@@ -1,7 +1,7 @@
 # GTD Network
 GTD Cryptocurrency is a motivational coin. Its goal is to motivate people to do their own task in exchange of GTDs. The coins are given by GTD's partners, which are productivity apps.
 
-- Read the story: (coming soon)
+- Read the story: https://medium.com/learning-lab/how-i-integrated-blockchain-to-my-existing-product-kanbanote-c97c74dafb6c
 - Website: https://gtd.network
 
 ## How to earn GTDs?
