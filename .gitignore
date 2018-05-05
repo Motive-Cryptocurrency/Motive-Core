@@ -35,5 +35,5 @@ deploy.sh
 /addons/src/*.java
 /out
 /ardor
-/ardor.exe
-/ardorservice.exe
+/Motive.exe
+/Motiveservice.exe
