@@ -25,9 +25,9 @@ public final class Constants {
     public static final boolean isLightClient = Nxt.getBooleanProperty("nxt.isLightClient");
     public static final String customLoginWarning = Nxt.getStringProperty("nxt.customLoginWarning", null, false, "UTF-8");
 
-    public static final String COIN_SYMBOL = "GTD";
-    public static final String ACCOUNT_PREFIX = "GTD";
-    public static final String PROJECT_NAME = "GTD Wallet";
+    public static final String COIN_SYMBOL = "MOTIV";
+    public static final String ACCOUNT_PREFIX = "MOTIV";
+    public static final String PROJECT_NAME  = "Motive";
     public static final int MAX_NUMBER_OF_TRANSACTIONS = Nxt.getIntProperty("nxt.maxNumberOfTransactions", 255);
     public static final int MIN_TRANSACTION_SIZE = 176;
     public static final int MAX_PAYLOAD_LENGTH = MAX_NUMBER_OF_TRANSACTIONS * MIN_TRANSACTION_SIZE;

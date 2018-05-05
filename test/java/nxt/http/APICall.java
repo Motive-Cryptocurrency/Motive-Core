@@ -1,6 +1,6 @@
 /*
  * Copyright © 2013-2016 The Nxt Core Developers.
- * Copyright © 2016-2017 Jelurida IP B.V.
+ * Copyright © 2016-2018 Jelurida IP B.V.
  *
  * See the LICENSE.txt file at the top-level directory of this distribution
  * for licensing information.
@@ -24,13 +24,16 @@ import org.junit.Assert;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -42,15 +45,18 @@ import static org.mockito.Mockito.when;
 public class APICall {
 
     private Map<String, List<String>> params;
+    private Map<String, Part> parts;
 
     private APICall(Builder builder) {
         this.params = builder.params;
+        this.parts = builder.parts;
     }
 
     public static class Builder {
 
         protected Map<String, List<String>> params = new HashMap<>();
-        
+        private Map<String, Part> parts = new HashMap<>();
+
         public Builder(String requestType) {
             params.put("requestType", Collections.singletonList(requestType));
             params.put("deadline", Collections.singletonList("1440"));
@@ -94,6 +100,11 @@ public class APICall {
             return params.get(key).get(0);
         }
 
+        public Builder parts(String key, String content) {
+            parts.put(key, new PartImpl(content));
+            return this;
+        }
+
         public APICall build() {
             return new APICall(this);
         }
@@ -123,13 +134,20 @@ public class APICall {
             when(req.getParameter(key)).thenReturn(firstOrNull(params.get(key)));
             when(req.getParameterValues(key)).thenReturn(toArrayOrNull(params.get(key)));
         }
+        for (String key : parts.keySet()) {
+            try {
+                when(req.getPart(key)).thenReturn(parts.get(key));
+            } catch (IOException | ServletException e) {
+                throw new IllegalStateException(e);
+            }
+        }
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
         try {
             when(resp.getWriter()).thenReturn(writer);
             APIServlet apiServlet = new APIServlet();
             apiServlet.doPost(req, resp);
-        } catch (ServletException | IOException e) {
+        } catch (IOException e) {
             Assert.fail();
         }
         JSONObject response = (JSONObject) JSONValue.parse(new InputStreamReader(new ByteArrayInputStream(out.toByteArray())));
@@ -137,4 +155,62 @@ public class APICall {
         return response;
     }
 
+    static class PartImpl implements Part {
+
+        private final String content;
+
+        PartImpl(String content) {
+            this.content = content;
+        }
+
+        @Override
+        public InputStream getInputStream() throws IOException {
+            return new ByteArrayInputStream(content.getBytes());
+        }
+
+        @Override
+        public String getContentType() {
+            return null;
+        }
+
+        @Override
+        public String getName() {
+            return "testName";
+        }
+
+        @Override
+        public String getSubmittedFileName() {
+            return "testSubmittedFileName";
+        }
+
+        @Override
+        public long getSize() {
+            return content.getBytes().length;
+        }
+
+        @Override
+        public void write(String s) throws IOException {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void delete() throws IOException {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public String getHeader(String s) {
+            return null;
+        }
+
+        @Override
+        public Collection<String> getHeaders(String s) {
+            return null;
+        }
+
+        @Override
+        public Collection<String> getHeaderNames() {
+            return null;
+        }
+    }
 }

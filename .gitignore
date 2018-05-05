@@ -22,6 +22,7 @@
 /compile.bat
 /test/classes/
 *.csv
+/jre
 /dist
 deploy.sh
 /resource/nxt.manifest.mf
@@ -34,6 +35,5 @@ deploy.sh
 /addons/src/*.java
 /out
 /ardor
-/ardor.exe
-/ardorservice.exe
-/logs
+/Motive.exe
+/Motiveservice.exe

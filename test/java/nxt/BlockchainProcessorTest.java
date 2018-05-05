@@ -1,6 +1,6 @@
 /*
  * Copyright © 2013-2016 The Nxt Core Developers.
- * Copyright © 2016-2017 Jelurida IP B.V.
+ * Copyright © 2016-2018 Jelurida IP B.V.
  *
  * See the LICENSE.txt file at the top-level directory of this distribution
  * for licensing information.
@@ -112,7 +112,7 @@ public class BlockchainProcessorTest extends AbstractBlockchainTest {
 
     @Test
     public void reprocessTransactionsTest() {
-        int start = Constants.LAST_KNOWN_BLOCK - 2000;
+        int start = Math.max(Constants.LAST_KNOWN_BLOCK - 2000, 0);
         reset(start);
         int end;
         downloadTo(start);

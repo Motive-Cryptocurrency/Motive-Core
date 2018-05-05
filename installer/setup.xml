@@ -4,9 +4,9 @@
         <property file="conf/nxt-default.properties" prefix="runtime"/>
     </properties>
     <info>
-        <appname>GTD</appname>
+        <appname>Motive</appname>
         <appversion>@{runtime.nxt.version}</appversion>
-        <url>https://gtd.network</url>
+        <url>https://motive.network</url>
         <run-privileged condition="izpack.windowsinstall"/>
     </info>
 
@@ -83,7 +83,7 @@
     </locale>
 
     <resources>
-		<res id="InfoPanel.info" src="changelogs/nxt-clone-client-1.11.13.changelog.txt" parse="yes"/>
+        <res id="InfoPanel.info" src="changelogs/changelog.txt" parse="yes"/>
         <res id="LicencePanel.licence" src="LICENSE.txt"/>
         <res id="Installer.image" src="html/www/img/installer_left_pane.png"/>
         <res id="shortcutSpec.xml" src="../installer/shortcutSpec.xml"/>
@@ -94,7 +94,7 @@
     <variables>
         <variable name="$InstallerFrame.logfilePath" value="default"/>
         <variable name="DesktopShortcutCheckboxEnabled" value="true"/>
-        <variable name="TargetPanel.dir.mac" value="/Applications/gtd.app"/>
+        <variable name="TargetPanel.dir.mac" value="/Applications/Motive.app"/>
     </variables>
 
     <panels>
@@ -110,7 +110,7 @@
     <packs>
         <pack name="server" required="yes">
             <description>Common Server Files</description>
-            <file src="GTD-Cryptocurrency.jar" targetdir="${INSTALL_PATH}" override="true"/>
+            <file src="Motive.jar" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="README.txt" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="Wallet.url" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="3RD-PARTY-LICENSES.txt" targetdir="${INSTALL_PATH}" override="true"/>
@@ -133,13 +133,13 @@
             <fileset dir="contrib" targetdir="${INSTALL_PATH}/contrib" override="true" excludes=".gitignore"/>
             <fileset dir="logs" targetdir="${INSTALL_PATH}/logs" override="true" excludes=".gitignore"/>
             <fileset dir="addons" targetdir="${INSTALL_PATH}/addons" override="true" excludes=".gitignore"/>
-			<fileset dir="conf" targetdir="${INSTALL_PATH}/conf" override="true" excludes=".gitignore"/>
+            <fileset dir="conf" targetdir="${INSTALL_PATH}/conf" override="true" excludes=".gitignore"/>
             <updatecheck>
                 <include name="*.desktop" />
                 <include name="lib/**" />
                 <include name="classes/**" />
                 <include name="html/**" />
-				<include name="conf/**" />
+                <include name="conf/**" />
                 <exclude name="html/www/plugins/**" />
             </updatecheck>
         </pack>
@@ -147,9 +147,9 @@
         <pack name="server.windows" os="windows" required="yes">
             <description>Windows Specific Resources</description>
             <os family="windows"/>
-			<file src="GTD-Cryptocurrency.exe" targetdir="${INSTALL_PATH}" override="true"/>
-            <file src="GTD-Cryptocurrencyservice.exe" targetdir="${INSTALL_PATH}" override="true"/>
-            <file src="GTD-Cryptocurrencyservice.jar" targetdir="${INSTALL_PATH}" override="true"/>
+            <file src="Motive.exe" targetdir="${INSTALL_PATH}" override="true"/>
+            <file src="Motiveservice.exe" targetdir="${INSTALL_PATH}" override="true"/>
+            <file src="Motiveservice.jar" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="run.bat" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="mint.bat" targetdir="${INSTALL_PATH}" override="true"/>
             <file src="compact.bat" targetdir="${INSTALL_PATH}" override="true"/>
@@ -194,7 +194,7 @@
         <pack name="server.mac" os="mac_osx" required="yes" uninstall="false">
             <description>Mac Specific Resources</description>
             <fileset dir="resource/mac/Contents" targetdir="${INSTALL_PATH}/Contents" override="true"/>
-			<parsable targetfile="${INSTALL_PATH}/Contents/MacOS/nxt"/>
+			<parsable targetfile="${INSTALL_PATH}/Contents/MacOS/MOTIV"/>
 			<executable targetfile="${INSTALL_PATH}/Contents/MacOS/nxt"/>
 		</pack>
 
