@@ -7,6 +7,7 @@ Motive (MOTIV) is a motivational coin. Its goal is to motivate people to do thei
 
 - Read the story: https://medium.com/learning-lab/how-i-integrated-blockchain-to-my-existing-product-kanbanote-c97c74dafb6c
 - Website: https://motive.network
+- API Documentation: http://docs.motive.network
 
 ----
 
