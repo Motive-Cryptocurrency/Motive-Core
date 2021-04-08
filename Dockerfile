@@ -8,7 +8,7 @@
 # 4. run the created nxt container with ```docker run -d -p 127.0.0.1:37876:7876 -p 37874:7874 nxt```
 # 5. inspect with docker logs (image hash, find out with docker ps, or assign a name)
 
-FROM phusion/baseimage:bionic-1.0.0
+FROM phusion/baseimage:0.9.21
 # start off with standard ubuntu images
 
 # Set local and enable UTF-8
@@ -18,7 +18,7 @@ ENV LC_ALL C.UTF-8
 
 #java8
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
-RUN apt-get update && apt-get install -y software-properties-common python-software-properties
+RUN apt-get update && apt-get install -y software-properties-common
 RUN add-apt-repository ppa:webupd8team/java -y
 RUN apt-get update
 RUN apt-get install -y wget unzip
