@@ -22,8 +22,9 @@ RUN apt-get update && apt-get install -y software-properties-common
 RUN add-apt-repository ppa:webupd8team/java -y
 RUN apt-get update
 RUN apt-get install -y wget unzip
-RUN echo oracle-java8-set-default shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-RUN apt-get install -y oracle-java8-set-default
+RUN wget https://d3pxv6yz143wms.cloudfront.net/8.212.04.2/java-1.8.0-amazon-corretto-jdk_8.212.04-2_amd64.deb && \
+    apt-get update &&  apt-get install java-common && apt-get install -y --no-install-recommends apt-utils && \
+    dpkg --install java-1.8.0-amazon-corretto-jdk_8.212.04-2_amd64.deb
 
 # run and compile nxt
 RUN mkdir /nxt
