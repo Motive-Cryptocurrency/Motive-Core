@@ -8,7 +8,7 @@
 # 4. run the created nxt container with ```docker run -d -p 127.0.0.1:37876:7876 -p 37874:7874 nxt```
 # 5. inspect with docker logs (image hash, find out with docker ps, or assign a name)
 
-FROM phusion/baseimage
+FROM phusion/baseimage:bionic-1.0.0
 # start off with standard ubuntu images
 
 # Set local and enable UTF-8
