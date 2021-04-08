@@ -33,7 +33,7 @@ ADD . /nxt
 # set nxt to listen on all interfaces
 RUN echo 'nxt.allowedBotHosts=*' >> /nxt/conf/nxt.properties
 RUN echo 'nxt.apiServerHost=0.0.0.0' >> /nxt/conf/nxt.properties
-RUN cd /nxt; chmod +x /docker_start.sh
+RUN cd /nxt; chmod +x ./docker_start.sh
 
 RUN cd /nxt; ./compile.sh
 # both Nxt ports get exposed
