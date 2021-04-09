@@ -38,4 +38,4 @@ RUN cd /nxt; chmod +x ./docker_start.sh
 RUN cd /nxt; ./compile.sh
 # both Nxt ports get exposed
 EXPOSE 37874 37876
-CMD ["/docker_start.sh"]
+CMD ["/nxt/docker_start.sh"]
