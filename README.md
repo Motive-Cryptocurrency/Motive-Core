@@ -55,6 +55,8 @@ By using one of these services you can earn Motive Coin by only doing your own t
     - no spaces and only latin characters in the path to the NRS installation directory
     - known jetty issue
 
+  - If you don't find any peers, add n.motive.network 
+
 ----
 ## Further Reading ##
 
