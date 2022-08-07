@@ -1,7 +1,12 @@
 ----
 # Welcome to MOTIV! #
 
+⚠️ Motive Network got discontinued: Due to lack of usage and node runners we decided to sunset the motive network.
+
 ----
+
+
+
 ## What is MOTIV? ##
 Motive (MOTIV) is a motivational coin. Its goal is to motivate people to do their own task in exchange of MOTIVs. The coins are given by Motive's partners, which are productivity apps.
 
